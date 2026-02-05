@@ -10,6 +10,13 @@ use Illuminate\Http\Request;
 class WalletController extends Controller
 {
 
+public function index()
+{
+    $transactions = Transaction::where('user_id', Auth::id())->latest()->get();
+
+    return view('home', compact('transactions'));
+}
+
     public function topUp(Request $request)
     {
         $request->validate([

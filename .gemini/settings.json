@@ -1,0 +1,10 @@
+{
+  "security": {
+    "enablePermanentToolApproval": true
+  },
+  "ui": {
+    "accessibility": {
+      "screenReader": true
+    }
+  }
+}

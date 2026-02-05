@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->foreign('user_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users');
             $table->decimal('amount', 15, 2);
             $table->enum('type', ['topup', 'pay']);
             $table->text('description')->nullable();
